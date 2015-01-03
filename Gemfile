@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-group :production do
+group :staging,:production do
    gem 'unicorn'
 end
 
@@ -100,6 +100,10 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'factory_girl_rails'
   gem "spring-commands-rspec"
+  gem "capistrano", "3.1.0"
+  gem "capistrano-rails"
+  gem "capistrano-bundler"
+  gem "capistrano3-unicorn"
 end
 
 group :test do
